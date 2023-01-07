@@ -5,6 +5,9 @@ import styles from '../styles/Home.module.css'
 import { client } from '../libs/client'
 import type { Blog } from '../types/blog'
 import Link from 'next/link'
+import "tailwindcss/tailwind.css";
+import NextImage from 'next/image';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,12 +28,19 @@ type Props = {
 
 export default function Home({ blogs }: Props) {
   return (
-    <div>
+    <div className='bg-blue-500'>
+      <h1>記事一覧</h1>
       <ul>
         {blogs.map((blog) => (
-          <li key={blog.id}>
-            <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
-          </li>
+          
+            <div>
+              {/* if(blog.eyecatch != null){ */}
+                <img src={blog.eyecatch.url} alt="" />
+              {/* } */}
+            <li key={blog.id}>
+              <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+            </li>
+            </div>
         ))}
       </ul>
     </div>
