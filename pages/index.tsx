@@ -32,24 +32,26 @@ export default function Home({ blogs }: Props) {
     <div className='bg-gray-700 '>
       <Head></Head>
       <div className='pt-3'>
-        <h1 className='text-3xl text-gray-200 text-center mb-8 border-b pb-3'>記事一覧</h1>
-        <ul className='md:flex md:grid md:grid-cols-2 lg:grid-cols-4 p-1'>
+        <h1 className='text-3xl text-gray-200 text-center mb-6 border-b pb-3'>記事一覧</h1>
+        <ul className='md:flex md:grid md:grid-cols-2 lg:grid-cols-4 pl-5 pr-5'>
           {blogs.map((blog) => (
   
-            <div key={blog.id} className='bg-gray-800 w-4/5  mb-5 ml-auto mr-auto p-2 pr-5 pl-5 rounded'>
+            <div key={blog.id} className='bg-gray-800 md:w-4/5  mb-5 ml-auto mr-auto p-2 pr-3 pl-3 rounded'>
               {/* if(blog.eyecatch != null){ */}
   
               {/* } */}
               <li key={blog.id} className="mt-2">
                 <Link href={`/blog/${blog.id}`}>
                   
-                  {/* サムネの高さを統一 */}
-                  <div className='h-32'>
-                    <img
-                      className="w-full h-full"
-                      src={blog.eyecatch.url} alt="" width={blog.eyecatch.width}  />
+                  <div className='flex md:flex-auto md:flex-col'>
+                    {/* サムネの高さを統一 */}
+                    
+                      <img
+                        className="sm:w-1/4 md:w-full w-1/4 h-full order-3 md:order-1 m-auto"
+                        src={blog.eyecatch.url} alt="" width={blog.eyecatch.width}  />
+                      <h3 className='mt-2 text-gray-100 border-l border-red-500 pl-2 w-3/4 md:w-full md:flex-col order-1 m-auto'>{blog.title}</h3>
+                    
                   </div>
-                  <h3 className='mt-2 text-gray-100 border-l border-red-500 pl-2'>{blog.title}</h3>
                 </Link>
               </li>
             </div>
