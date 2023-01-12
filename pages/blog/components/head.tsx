@@ -1,6 +1,6 @@
 import "tailwindcss/tailwind.css";
 import Link from 'next/link'
-export function Head() {
+export default function Head() {
     return(
         <div className="p-3 bg-indigo-600 pl-8">
             <div>

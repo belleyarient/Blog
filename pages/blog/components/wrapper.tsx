@@ -1,5 +1,5 @@
 import "tailwindcss/tailwind.css";
-export function Wrapper() {
+export default function Wrapper() {
     return(
         <div className="p-3 bg-red-500">
 

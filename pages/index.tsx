@@ -7,8 +7,8 @@ import type { Blog } from '../types/blog'
 import Link from 'next/link'
 import "tailwindcss/tailwind.css";
 import NextImage from 'next/image';
-import { Wrapper } from './blog/components/wrapper'
-import { Head } from './blog/components/head'
+
+import Head from './blog/components/head'
 
 const inter = Inter({ subsets: ['latin'] })
 

@@ -2,7 +2,7 @@ import { type } from "os";
 import { client } from "../../libs/client";
 import { Blog } from "../../types/blog";
 import "tailwindcss/tailwind.css";
-import { Head } from "./components/head";
+import  Head  from "./components/head";
 
 type Props = {
     blog: Blog;
