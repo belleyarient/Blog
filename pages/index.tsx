@@ -36,7 +36,7 @@ export default function Home({ blogs }: Props) {
         <ul className='md:flex md:grid md:grid-cols-2 lg:grid-cols-4 p-1'>
           {blogs.map((blog) => (
   
-            <div className='bg-gray-800 w-4/5  mb-5 ml-auto mr-auto p-2 pr-5 pl-5 rounded'>
+            <div key={blog.id} className='bg-gray-800 w-4/5  mb-5 ml-auto mr-auto p-2 pr-5 pl-5 rounded'>
               {/* if(blog.eyecatch != null){ */}
   
               {/* } */}
