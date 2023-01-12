@@ -32,7 +32,7 @@ export default function Home({ blogs }: Props) {
     <div className='bg-gray-700 '>
       <Head></Head>
       <div className='pt-3'>
-        <h1 className='text-3xl text-gray-200 text-center mb-5 border-b pb-3'>記事一覧</h1>
+        <h1 className='text-3xl text-gray-200 text-center mb-8 border-b pb-3'>記事一覧</h1>
         <ul className='md:flex md:grid md:grid-cols-2 lg:grid-cols-4 p-1'>
           {blogs.map((blog) => (
   
