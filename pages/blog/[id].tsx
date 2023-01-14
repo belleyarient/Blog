@@ -3,6 +3,9 @@ import { client } from "../../libs/client";
 import { Blog } from "../../types/blog";
 import "tailwindcss/tailwind.css";
 import  Head  from "./components/head";
+import { MarkdownTemplate } from "./components/markdownTemplate";
+import Footer from "./components/footer";
+
 
 type Props = {
     blog: Blog;
@@ -10,18 +13,20 @@ type Props = {
 
 export default function BlogId({ blog }: Props) {
   return (
-    <main className="">
+    <main className="bg-gray-800 min-h-screen relative pb-12">
       <Head></Head>
-      <div className="bg-gray-800 p-2 pl-8 pr-8 pt-5">
-        <h1 className="text-3xl mb-5 border-b border-green-400">{blog.title}</h1>
+      <div className="bg-gray-800 p-2 pl-8 pr-8 pt-5 h-full">
+        <h1 className="text-3xl mb-5 border-b border-red-500">{blog.title}</h1>
         <p>{blog.publishedAt}</p>
         {/* {blog.content} */}
-        <div
+        {/* <div
           dangerouslySetInnerHTML={{
             __html: `${blog.content}`,
           }}
-        />
+        /> */}
+        <MarkdownTemplate source={blog.content} />
       </div>
+      <Footer></Footer>
     </main>
   );
 }
