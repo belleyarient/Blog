@@ -60,14 +60,14 @@ const p = {
   },
 };
 
-const code = {
-  component: Box,
-  props: {
-    fontSize: 'sm',
-    p: '4',
-    mb: '6',
-  },
-};
+// const code = {
+//   component: Box,
+//   props: {
+//     fontSize: 'sm',
+//     p: '4',
+//     mb: '6',
+//   },
+// };
 
 // const ul = {
 //   component: UnorderedList,
@@ -96,7 +96,7 @@ const a = {
   },
 };
 
-const languageSubset = ['js', 'html', 'css', 'xml', 'typescript'];
+// const languageSubset = ['js', 'html', 'css', 'xml', 'typescript'];
 
 const options: HTMLReactParserOptions = {
   replace: (domNode: any) => {
@@ -160,7 +160,7 @@ const options: HTMLReactParserOptions = {
   },
 };
 
-export const MarkdownTemplate = (props: MarkdownTemplateProps) => {
+ const MarkdownTemplate = (props: MarkdownTemplateProps) => {
   return (
     
 
@@ -187,3 +187,4 @@ export const MarkdownTemplate = (props: MarkdownTemplateProps) => {
     // </ChakraMarkdown>
   );
 };
+export default MarkdownTemplate;

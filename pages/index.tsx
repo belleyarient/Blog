@@ -11,6 +11,8 @@ import NextImage from 'next/image';
 import Head from './blog/components/head'
 import Footer from './blog/components/footer'
 
+
+
 const inter = Inter({ subsets: ['latin'] })
 
 // データをテンプレートに受け渡す部分の処理を記述します
