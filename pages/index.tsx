@@ -8,8 +8,8 @@ import Link from 'next/link'
 import "tailwindcss/tailwind.css";
 import NextImage from 'next/image';
 
-import Head from './blog/components/head'
-import Footer from './blog/components/footer'
+import Head from './components/head'
+import Footer from './components/footer'
 
 
 

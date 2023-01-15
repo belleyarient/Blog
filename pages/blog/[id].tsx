@@ -2,9 +2,9 @@ import { type } from "os";
 import { client } from "../../libs/client";
 import { Blog } from "../../types/blog";
 import "tailwindcss/tailwind.css";
-import  Head  from "./components/head";
-import  MarkdownTemplate  from "./components/markdownTemplate";
-import Footer from "./components/footer";
+import  Head  from "../components/head";
+import  MarkdownTemplate  from "../../src/components/markdownTemplate";
+import Footer from "../components/footer";
 
 
 type Props = {
